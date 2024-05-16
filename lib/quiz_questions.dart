@@ -24,14 +24,11 @@ class QuizQuestionScreen extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 50),
+        padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 50),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
-              height: 30,
-            ),
-            Container(
+            SizedBox(
               height: 410,
               child: Stack(
                 children: [
@@ -41,13 +38,12 @@ class QuizQuestionScreen extends StatelessWidget {
                       'assets/images/share1.png',
                     ),
                   ),
-                  Positioned(
-                    top: 0,
-                    right: 16,
+                  Align(
+                    alignment: Alignment.topCenter,
                     child: Container(
                       width: 170,
                       height: 70,
-                      padding: const EdgeInsets.all(18.47),
+                      padding: const EdgeInsets.all(19),
                       decoration: ShapeDecoration(
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
@@ -73,7 +69,7 @@ class QuizQuestionScreen extends StatelessWidget {
                           Countdown(
                             seconds: stateData.countDownTime,
                             build: (BuildContext context, double time) {
-// Convert time to minutes and seconds
+                                          // Convert time to minutes and seconds
                               int seconds = time.floor() % 60;
                               String secondsStr = seconds.toString().padLeft(
                                   2, '0'); // Add leading zero if needed
@@ -101,7 +97,7 @@ class QuizQuestionScreen extends StatelessWidget {
                                   ),
                                 );
                               }
-// _controller.restart();
+                                          // _controller.restart();
                             },
                             controller: stateData.controller,
                           ),

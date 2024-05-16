@@ -20,20 +20,7 @@ class QuizScreen extends StatelessWidget {
 
     //  String str = questionIndex.toString();
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            'Pixel Quiz',
-            style: TextStyle(
-              color: Color(0xFF212326),
-              fontSize: 25,
-              fontFamily: 'Google Sans',
-              fontWeight: FontWeight.w500,
-              height: 0.02,
-              letterSpacing: -0.96,
-            ),
-          ),
-        ),
+        appBar: AppBar(),
         body: FutureBuilder<List<dynamic>>(
           future: stateData.fetchQuestionsFromJsonLink(),
           builder: (context, snapshot) {
