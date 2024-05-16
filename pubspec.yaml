@@ -37,11 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   timer_count_down: ^2.2.2
   firebase_core: 
-  http: 
+  http:
   cloud_firestore: 
   provider: ^6.1.2
   cached_network_image: ^3.3.1
   shared_preferences: ^2.2.3
+  web:
 
 dev_dependencies:
   flutter_test:
