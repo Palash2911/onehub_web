@@ -7,7 +7,7 @@ import 'package:timer_count_down/timer_controller.dart';
 
 class DataState with ChangeNotifier {
   final contestCollection =
-      FirebaseFirestore.instance.collection('test-contests');
+      FirebaseFirestore.instance.collection("test-contests");
   List<QueryDocumentSnapshot> contests = [];
 
   String? jsonLink;
@@ -20,7 +20,6 @@ class DataState with ChangeNotifier {
       contests = snapshot.docs;
       print(contests);
 
-      // Get the jsonLink from the first document
       final jsonLinkDoc =
           snapshot.docs.firstWhere((doc) => doc.get('jsonLink') != null);
       jsonLink = jsonLinkDoc.get('jsonLink');
@@ -35,13 +34,12 @@ class DataState with ChangeNotifier {
 
   // fetch questions from json to a list
   Future<List<dynamic>> fetchQuestionsFromJsonLink() async {
-    await fetchContests();
-    if (jsonLink == null) {
-      return [];
-    }
-
+    // await fetchContests();
+    // if (jsonLink == null) {
+    //   return [];
+    // }
     try {
-      final response = await http.get(Uri.parse(jsonLink!));
+      final response = await http.get(Uri.parse('https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest1-questions.json?alt=media&token=48727f3c-4624-49b8-ae26-c1e97d829f33'));
       if (response.statusCode == 200) {
         final value = jsonDecode(response.body);
 
@@ -60,7 +58,35 @@ class DataState with ChangeNotifier {
     }
   }
 
+  Future<void> fetchRewards(userPoints, cId, tId) async {
+    try {
+      final uri = Uri.parse('https://gcptest.testexperience.site/getContestRewards_testing').replace(
+        queryParameters: {
+          'contest_id': cId.toString(),
+          'territory_id': tId.toString(),
+          'user_points': userPoints.toString(),
+        },
+      );
+
+      final response = await http.get(uri);
+
+      if (response.statusCode == 200) {
+        final value = jsonDecode(response.body);
+        rewardImageUrl = value['url'] ?? '' ;
+        print(value);
+        rewardText = value['reward_text'] ?? '';
+      } else {
+        print('Failed to fetch JSON file. Error: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error fetching JSON file: $e');
+    }
+    notifyListeners();
+  }
+
   List<dynamic> questions = [];
+  String rewardImageUrl = '';
+  String rewardText = '';
 
   int? selectedAnswerIndex;
   int questionIndex = 0;
@@ -73,9 +99,13 @@ class DataState with ChangeNotifier {
     countDownTime = 4;
     controller.restart();
     selectedAnswerIndex = value;
-    final question = questions[questionIndex];
-    if (selectedAnswerIndex == question) {
+    final questionCorrectIndex = questions[questionIndex]['correctAnswerIndex'];
+    if (selectedAnswerIndex == questionCorrectIndex) {
       score++;
+    }
+
+    if(questionIndex == (questions.length - 1)) {
+      fetchRewards(score, 1, "NewYork, NY");
     }
 
     notifyListeners();

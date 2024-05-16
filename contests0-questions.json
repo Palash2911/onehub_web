@@ -1,0 +1,112 @@
+[
+  {
+    "question": "Name Googles AI model which powers most AI smartphones including Pixel & Samsung.",
+    "correctAnswerIndex": 2,
+    "options": [
+      "A.   Alpha+",
+      "B.   Chat GPT",
+      "C.   Google Gemini",
+      "D.   Google Bard"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-1.png?alt=media&token=f94cd2c7-ac18-44b1-8ce4-4c27ad3f17ab"
+  },
+  {
+    "question": "Which of the below does the Pixel Call Assist help you with?",
+    "correctAnswerIndex": 3,
+    "options": [
+      "A.   Screens call to weed out spammers",
+      "B.   Holds the line for you while waiting for customer care",
+      "C.   Minimizes noises from both caller and receiver",
+      "D.   All of the above"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-2.png?alt=media&token=9df276dc-4857-4ebf-b49a-31faa3fb4c81"
+  },
+  {
+    "question": "Which Pixel AI camera feature lets you swap a person's face from another image in group photos?",
+    "correctAnswerIndex": 2,
+    "options": [
+      "A.   Magic Eraser",
+      "B.   Photo Unblur",
+      "C.   Best Take",
+      "D.   Motion Mode"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-3.png?alt=media&token=dcf0a9b8-df82-4d5f-b8c5-998be345c675"
+  },
+  {
+    "question": "Which Pixel phones will Circle to Search be available on?",
+    "correctAnswerIndex": 3,
+    "options": [
+      "A.   Pixel 8 Pro",
+      "B.   Pixel 7 Series",
+      "C.   Pixel 6 Series",
+      "D.   All of the above"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-4.png?alt=media&token=d01bec9e-f17e-4880-be53-257c2cb993fd"
+  },
+  {
+    "question": "Which Pixel feature ensures safe return when jogging alone on unfamiliar routes?",
+    "correctAnswerIndex": 0,
+    "options": [
+      "A.   Safety timer shares location to emergency contacts.",
+      "B.   Car crash detection and quick dial SOS",
+      "C.   Calling emergency services with 5 taps during SOS ",
+      "D.   Record notes to share on socials during emergencies"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-5.png?alt=media&token=64d2a656-1084-48c5-b052-80dddd470e36"
+  },
+  {
+    "question": "If you wanted to know which song was playing around you on your Pixel, what would you do?",
+    "correctAnswerIndex": 2,
+    "options": [
+      "A.   Search for top music detection apps in your browser.",
+      "B.   Go to your favorite music app and search the lyrics",
+      "C.   Click on the Now Playing music icon on your locked screen",
+      "D.   Record the music and ask your friend later"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-6.png?alt=media&token=69215e36-a01e-493c-9ee1-49b748abd63a"
+  },
+  {
+    "question": "You are on an important meet but forgot your notepad. How can you quickly share a meet summary with the team post the meet?",
+    "correctAnswerIndex": 1,
+    "options": [
+      "A.   Record the meeting and rewatch to make notes",
+      "B.   Use Pixel’s Live Transcribe or Summarize features",
+      "C.   Collate notes from different team members and prepare summary",
+      "D.   None of the above"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-7.png?alt=media&token=2abffca0-ede5-4c24-a126-ab304bc282d5"
+  },
+  {
+    "question": "Which of the above can help you respond to texts while multitasking?",
+    "correctAnswerIndex": 3,
+    "options": [
+      "A.   Slide your finger from letter to letter to form words",
+      "B.   Dictate your response via voice typing",
+      "C.   Use the smart replies features",
+      "D.   Any of the above"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-8.png?alt=media&token=2a5ca1ae-2610-4960-aa4f-669e8dff0407"
+  },
+  {
+    "question": "You are on travels in a foreign country and want to translate a food menu in front of you. What is the quickest way to do this?",
+    "correctAnswerIndex": 1,
+    "options": [
+      "A.   Open Google search and try to type the menu items",
+      "B.   Open Google Translate and open camera to detect text",
+      "C.   Open Gemini and search for the most popular dishes in the country",
+      "D.   None of the above"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-9.png?alt=media&token=ecc911fb-8721-41ba-b5b6-275403ef22a0"
+  },
+  {
+    "question": "You are on an important client call but unfortunately your laptop built in webcam is not making you look very presentable. What are your options?",
+    "correctAnswerIndex": 1,
+    "options": [
+      "A.   Reschedule the call",
+      "B.   Connect your Pixel device via USB to your laptop and use the Pixel camera for the ongoing call",
+      "C.   Disconnect from the laptop and join the call from Pixel phone",
+      "D.   Connect the laptop to an external webcam"
+    ],
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest-1-images%2Fque-10.png?alt=media&token=c5168d7f-6f59-48a4-bf28-502924df850b"
+  }
+]
