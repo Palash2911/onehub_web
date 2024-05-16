@@ -22,7 +22,7 @@ class QuizScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'Pixel Quiz',
             style: TextStyle(
               color: Color(0xFF212326),

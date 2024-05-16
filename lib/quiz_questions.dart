@@ -43,7 +43,7 @@ class QuizQuestionScreen extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: screenWidth / 4,
+                    right: 16,
                     child: Container(
                       width: 170,
                       height: 70,
@@ -90,7 +90,6 @@ class QuizQuestionScreen extends StatelessWidget {
                             },
                             interval: const Duration(seconds: 1),
                             onFinished: () {
-                              print('Timer is done!');
                               stateData.goToNextQuestion();
                               if (isLastQuestion) {
                                 Navigator.of(context).pushReplacement(
@@ -155,8 +154,6 @@ class QuizQuestionScreen extends StatelessWidget {
                 fontSize: 30,
                 fontFamily: 'GoogleSans',
                 fontWeight: FontWeight.w500,
-                height: 0,
-                letterSpacing: -0.40,
               ),
               textAlign: TextAlign.center,
             ),
@@ -185,6 +182,7 @@ class QuizQuestionScreen extends StatelessWidget {
             isLastQuestion
                 ? RectangularButton(
                     onPressed: () {
+                      stateData.pickAnswer(-1);
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
                           builder: (_) => ResultScreen(

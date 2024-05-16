@@ -39,7 +39,8 @@ class DataState with ChangeNotifier {
     //   return [];
     // }
     try {
-      final response = await http.get(Uri.parse('https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest1-questions.json?alt=media&token=48727f3c-4624-49b8-ae26-c1e97d829f33'));
+      final response = await http.get(Uri.parse(
+          'https://firebasestorage.googleapis.com/v0/b/tsm-ecf9e.appspot.com/o/contest-questions%2Fcontest1-questions.json?alt=media&token=48727f3c-4624-49b8-ae26-c1e97d829f33'));
       if (response.statusCode == 200) {
         final value = jsonDecode(response.body);
 
@@ -60,7 +61,9 @@ class DataState with ChangeNotifier {
 
   Future<void> fetchRewards(userPoints, cId, tId) async {
     try {
-      final uri = Uri.parse('https://gcptest.testexperience.site/getContestRewards_testing').replace(
+      final uri = Uri.parse(
+              'https://gcptest.testexperience.site/getContestRewards_testing')
+          .replace(
         queryParameters: {
           'contest_id': cId.toString(),
           'territory_id': tId.toString(),
@@ -72,7 +75,7 @@ class DataState with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final value = jsonDecode(response.body);
-        rewardImageUrl = value['url'] ?? '' ;
+        rewardImageUrl = value['url'] ?? '';
         print(value);
         rewardText = value['reward_text'] ?? '';
       } else {
@@ -96,15 +99,18 @@ class DataState with ChangeNotifier {
   void pickAnswer(
     int value,
   ) {
-    countDownTime = 4;
-    controller.restart();
-    selectedAnswerIndex = value;
-    final questionCorrectIndex = questions[questionIndex]['correctAnswerIndex'];
-    if (selectedAnswerIndex == questionCorrectIndex) {
-      score++;
+    if (value != -1) {
+      countDownTime = 4;
+      controller.restart();
+      selectedAnswerIndex = value;
+      final questionCorrectIndex =
+          questions[questionIndex]['correctAnswerIndex'];
+      if (selectedAnswerIndex == questionCorrectIndex) {
+        score++;
+      }
     }
 
-    if(questionIndex == (questions.length - 1)) {
+    if (questionIndex == (questions.length - 1)) {
       fetchRewards(score, 1, "NewYork, NY");
     }
 

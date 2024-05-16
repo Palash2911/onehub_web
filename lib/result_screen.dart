@@ -21,6 +21,7 @@ class ResultScreen extends StatelessWidget {
               stateData.rewardImageUrl.isNotEmpty
                   ? Image.network(stateData.rewardImageUrl)
                   : const SizedBox(width: 1),
+              const SizedBox(height: 15),
               const Text(
                 'Your Score: ',
                 style: TextStyle(
@@ -28,6 +29,7 @@ class ResultScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              const SizedBox(height: 10),
               Stack(
                 alignment: Alignment.center,
                 children: [
@@ -46,10 +48,8 @@ class ResultScreen extends StatelessWidget {
                     children: [
                       Text(
                         score.toString(),
-                        style: const TextStyle(fontSize: 80),
+                        style: const TextStyle(fontSize: 60),
                       ),
-                      const SizedBox(height: 10),
-                      const SizedBox(height: 10),
                       Text(
                         '${(score / questions.length * 100).round()}%',
                         style: const TextStyle(fontSize: 25),
