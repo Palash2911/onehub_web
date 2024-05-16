@@ -29,13 +29,16 @@ class QuizQuestionScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
-              height: 410,
+              // height: 410,
               child: Stack(
                 children: [
-                  Container(
-                    padding: const EdgeInsets.only(top: 40.0),
-                    child: Image.asset(
-                      'assets/images/share1.png',
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      padding: const EdgeInsets.only(top: 40.0),
+                      child: Image.asset(
+                        'assets/images/share1.png',
+                      ),
                     ),
                   ),
                   Align(
